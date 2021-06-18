@@ -17,8 +17,8 @@ namespace Security
         {
             var handler = (update.Type) switch
             {
-                UpdateType.Message            => MessageReceived(update.Message),
-                _                             => UnknownReceived(update)
+                UpdateType.Message => MessageReceived(update.Message),
+                _                  => UnknownReceived(update)
             };
 
             try
