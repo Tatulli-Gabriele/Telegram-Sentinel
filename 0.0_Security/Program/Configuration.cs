@@ -11,7 +11,7 @@ namespace Security
             "[a-zA-Z0-9_]=\"([a-zA-Z0-9:]*)\""
         );
 
-        public static Dictionary<string, string> Variables { get;set; }
+        public static Dictionary<string, string> Variables = new Dictionary<string, string>();
         public static async Task InitializeFileVariables(string envFilePath)
         {
             foreach(var line in await File.ReadAllLinesAsync(envFilePath))
